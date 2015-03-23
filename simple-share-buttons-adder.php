@@ -1376,13 +1376,13 @@ function ssba_tumblr($arrSettings, $urlCurrentPage, $strPageTitle, $booShowShare
 function ssba_print($arrSettings, $urlCurrentPage, $strPageTitle, $booShowShareCount) {
 
 	// linkedin share link
-	$htmlShareButtons = '<a class="ssba_print ssba_share_link" href="#" onclick="window.print()">';
-	
-	// if image set is not custom
+    $htmlShareButtons = '<a class="ssba_facebook_share" href="http://meneame.net/submit.php?url=' . $urlCurrentPage  . '" '. ($arrSettings['ssba_rel_nofollow'] == 'Y' ? ' rel="nofollow"' : NULL) .'>';
+
+    // if image set is not custom
 	if ($arrSettings['ssba_image_set'] != 'custom') {
 	
 		// show ssba image
-		$htmlShareButtons .= '<img src="' . WP_PLUGIN_URL . '/simple-share-buttons-adder/buttons/' . $arrSettings['ssba_image_set'] . '/print.png" title="Print" class="ssba" alt="Print this page" />';
+		$htmlShareButtons .= '<img src="' . WP_PLUGIN_URL . '/simple-share-buttons-adder/buttons/' . $arrSettings['ssba_image_set'] . '/meneame.png" title="Menéame" class="ssba" alt="Menea esta página" />';
 	}
 	
 	// if using custom images
